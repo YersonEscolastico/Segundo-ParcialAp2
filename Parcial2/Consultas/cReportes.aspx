@@ -61,7 +61,7 @@
 
              <%--Imprimir--%>
        <div class="col-md-4">
-                    <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-primary input-sm" Text="Imprimnir" OnClick="ImprimirButton_Click" />
+                    <asp:Button ID="ImprimirButton" runat="server" Class="btn btn-primary input-sm" Text="Imprimir" OnClick="ImprimirButton_Click" />
         
                 </div>    </div>
 
