@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\cReportes.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -122,7 +123,7 @@
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Reportes\TransRep.aspx" />
+    <Content Include="Reportes\Trans.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -209,16 +210,23 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cReportes.aspx.cs">
+      <DependentUpon>cReportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cReportes.aspx.designer.cs">
+      <DependentUpon>cReportes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\TransRep.aspx.cs">
-      <DependentUpon>TransRep.aspx</DependentUpon>
+    <Compile Include="Reportes\Trans.aspx.cs">
+      <DependentUpon>Trans.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reportes\TransRep.aspx.designer.cs">
-      <DependentUpon>TransRep.aspx</DependentUpon>
+    <Compile Include="Reportes\Trans.aspx.designer.cs">
+      <DependentUpon>Trans.aspx</DependentUpon>
     </Compile>
     <Compile Include="SegundoPDb0DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -233,6 +241,7 @@
       <DependentUpon>SiteMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -268,7 +277,21 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\TransReport.rdlc" />
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{BF64C479-AB47-4BB8-BECC-95AC35A2E9EC}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{63D284FF-B3F4-4D4B-9DCB-D8B1B4646E37}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{69ED637A-F233-4703-96EF-51AF78DD2702}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\Transacciones.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@ namespace Parcial2.Reportes
 {
 
 
-    public partial class TransRep
+    public partial class Trans
     {
 
         /// <summary>
